@@ -4,7 +4,7 @@ const botReplies = {
   "report": "Sales reports are available in the Reports section. Choose a date range and click 'Export to Excel'.",
   "login issue": "Check your email and password. If you forgot it, use the 'Reset Password' option on the login page.",
   "attendance": "Attendance sync issues may be due to server delays. Please try again in 15 minutes or contact support.",
-  "support": "Raise your issue via this form 📩: <a href="https://forms.office.com/r/U2rs1e7nVW?origin=lprLink">Enter Your Issu Here!</a>",
+  "support": "Raise your issue via this form 📩: <a href="https://forms.office.com/r/U2rs1e7nVW">Enter Your Issu Here!</a>",
   "default": "I'm sorry, I didn’t understand that. Try typing: invoice, report, login issue, or support."
 };
 
