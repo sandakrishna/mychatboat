@@ -1,10 +1,10 @@
 const botReplies = {
-  "hi": "Hello! I’m ApBot – your product support assistant. How can I help you today? 😊",
+  "hi": "Hello! I’m Kittu – your product support assistant. How can I help you today? 😊",
   "invoice": "To generate an invoice: Go to the Invoice tab → Select client → Enter billing period & amount → Click 'Generate Invoice'.",
   "report": "Sales reports are available in the Reports section. Choose a date range and click 'Export to Excel'.",
   "login issue": "Check your email and password. If you forgot it, use the 'Reset Password' option on the login page.",
   "attendance": "Attendance sync issues may be due to server delays. Please try again in 15 minutes or contact support.",
-  "support": "Raise your issue via this form 📩: https://forms.gle/YOUR-FORM-LINK",
+  "support": "Raise your issue via this form 📩: https://forms.office.com/r/U2rs1e7nVW?origin=lprLink",
   "default": "I'm sorry, I didn’t understand that. Try typing: invoice, report, login issue, or support."
 };
 
