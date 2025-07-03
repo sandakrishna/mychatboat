@@ -1,10 +1,11 @@
 const botReplies = {
-  "hi": "Hello! How can I help you today? 😊",
-  "invoice": "To generate an invoice, go to the Invoice tab → select client → enter amount → click Generate.",
-  "report": "You can download reports under the Data Report module. Need help with filters?",
-  "login issue": "Make sure your email and password are correct. You can reset your password if needed.",
-  "support": "You can raise a ticket here: https://forms.gle/YOUR-FORM-LINK",
-  "default": "Sorry, I didn’t understand that. Please rephrase or try keywords like: invoice, report, login issue."
+  "hi": "Hello! I’m ApBot – your product support assistant. How can I help you today? 😊",
+  "invoice": "To generate an invoice: Go to the Invoice tab → Select client → Enter billing period & amount → Click 'Generate Invoice'.",
+  "report": "Sales reports are available in the Reports section. Choose a date range and click 'Export to Excel'.",
+  "login issue": "Check your email and password. If you forgot it, use the 'Reset Password' option on the login page.",
+  "attendance": "Attendance sync issues may be due to server delays. Please try again in 15 minutes or contact support.",
+  "support": "Raise your issue via this form 📩: https://forms.gle/YOUR-FORM-LINK",
+  "default": "I'm sorry, I didn’t understand that. Try typing: invoice, report, login issue, or support."
 };
 
 function sendMessage() {
@@ -17,21 +18,22 @@ function sendMessage() {
 
   const lowerCaseMsg = userMessage.toLowerCase();
   let reply = botReplies["default"];
-  
-  Object.keys(botReplies).forEach((key) => {
+
+  for (let key in botReplies) {
     if (lowerCaseMsg.includes(key)) {
       reply = botReplies[key];
+      break;
     }
-  });
+  }
 
-  setTimeout(() => addMessage("ApBot", reply), 500);
+  setTimeout(() => addMessage("ApBot", reply), 600);
 }
 
 function addMessage(sender, message) {
   const box = document.getElementById("chat-box");
   const msg = document.createElement("div");
   msg.innerHTML = `<strong>${sender}:</strong> ${message}`;
-  msg.style.margin = "5px 0";
+  msg.style.margin = "8px 0";
   box.appendChild(msg);
   box.scrollTop = box.scrollHeight;
 }
